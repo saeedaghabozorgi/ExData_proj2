@@ -1,7 +1,9 @@
-setwd("D:/ExpoCoursera/ExProj2/exdata-data-NEI_data")
+setwd("D:/Coursera/ExProj2/ExData_proj2")
 library(ggplot2)
-NEI<-readRDS("summarySCC_PM25.rds")
-SCC <- readRDS("Source_Classification_Code.rds")
+library(plyr)
+NEI<-readRDS("../exdata-data-NEI_data/summarySCC_PM25.rds")
+SCC <- readRDS("../exdata-data-NEI_data/Source_Classification_Code.rds")
+
 motor <- grep("motor", SCC$Short.Name, ignore.case = TRUE)
 SCC.motor <- SCC[motor, ]
 SCC.id <- as.character(SCC.motor$SCC)

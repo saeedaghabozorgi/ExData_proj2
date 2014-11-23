@@ -1,5 +1,5 @@
-setwd("D:/ExpoCoursera/ExProj2/exdata-data-NEI_data")
-NEI<-readRDS("summarySCC_PM25.rds")
+setwd("D:/Coursera/ExProj2/ExData_proj2")
+NEI<-readRDS("../exdata-data-NEI_data/summarySCC_PM25.rds")
 #NEI<-NEI[sample(nrow(NEI), 400), ]
 NEIB<-NEI[NEI$fips == "24510", ]
 v2<-aggregate(x=NEIB$Emissions, by=list(category=NEIB$year), FUN=sum)
